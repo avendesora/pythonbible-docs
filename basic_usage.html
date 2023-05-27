@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Book Abbreviations" href="book_abbreviations.html" /><link rel="prev" title="Installation" href="installation.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
-        <title>Basic Usage - pythonbible 0.7 documentation</title>
+    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+        <title>Basic Usage - pythonbible 0.10.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -37,10 +37,12 @@
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -122,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pythonbible 0.7 documentation</div></a>
+      <a href="index.html"><div class="brand">pythonbible 0.10.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -181,7 +183,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -197,6 +200,11 @@
         <article role="main">
           <div class="section" id="basic-usage">
 <h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To try any of the basic usage features in an interactive jupyter notebook, download this
+<a class="reference download internal" download="" href="_downloads/99cbd157498e41c0e45c6454492535a8/pythonbible-basic-usage.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
+</div>
 <div class="section" id="finding-scripture-references-in-text">
 <h2>Finding Scripture References in Text<a class="headerlink" href="#finding-scripture-references-in-text" title="Permalink to this headline">#</a></h2>
 <p>Given a text, you can search for scripture references and return any that are found in a list of <a class="reference internal" href="technical_reference.html#normalizedreference"><span class="std std-ref">NormalizedReferences</span></a> using the <a class="reference internal" href="technical_reference.html#get-references"><span class="std std-ref">get_references</span></a> function.</p>
@@ -206,7 +214,7 @@
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
 <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"The parable of the lost sheep is told in Matthew 18:12-14 and Luke 15:3-7."</span>
+    <span class="s2">&quot;The parable of the lost sheep is told in Matthew 18:12-14 and Luke 15:3-7.&quot;</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -241,7 +249,7 @@
 </pre></div>
 </div>
 </div>
-<p>The conversion functionality would return the following list of verse id integers:</p>
+<p>The conversion functionality would return the following tuple of verse id integers:</p>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
 <div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1001001</span><span class="p">,</span> <span class="mi">1001002</span><span class="p">,</span> <span class="mi">1001003</span><span class="p">,</span> <span class="mi">1001004</span><span class="p">]</span>
@@ -307,7 +315,7 @@
 
 <span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span>
     <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"My favorite verses are Philippians 4:8, Isaiah 55:13, and Philippians 4:4-7."</span>
+    <span class="s2">&quot;My favorite verses are Philippians 4:8, Isaiah 55:13, and Philippians 4:4-7.&quot;</span>
     <span class="p">)</span>
 <span class="p">)</span>
 </pre></div>
@@ -315,7 +323,7 @@
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Isaiah 55:13;Philippians 4:4-8'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Isaiah 55:13;Philippians 4:4-8&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -336,7 +344,7 @@
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'In the beginning God created the heavens and the earth.'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;In the beginning God created the heavens and the earth.&#39;</span>
 </pre></div>
 </div>
 </div>

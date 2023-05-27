@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Advanced Usage" href="advanced_usage.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
-        <title>Technical Reference - pythonbible 0.7 documentation</title>
+    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+        <title>Technical Reference - pythonbible 0.10.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -37,10 +37,12 @@
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -122,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pythonbible 0.7 documentation</div></a>
+      <a href="index.html"><div class="brand">pythonbible 0.10.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -181,7 +183,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -200,25 +203,29 @@
 <div class="section" id="book">
 <span id="id1"></span><h2>Book<a class="headerlink" href="#book" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="Book">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Book</span></span><a class="headerlink" href="#Book" title="Permalink to this definition">#</a></dt>
-<dd><p>Book is an <code class="docutils literal notranslate"><span class="pre">IntEnum</span></code> that contains all of the books of the Bible</p>
+<dt class="sig sig-object py" id="pythonbible.Book">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">Book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.Book" title="Permalink to this definition">#</a></dt>
+<dd><p>Book is an Enum that contains all the books of the Bible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – the unique text identifier of the book</p></li>
 <li><p><strong>value</strong> (<em>int</em>) – the unique numerical identifier of the book</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – the common English name of the book</p></li>
+<li><p><strong>regular_expression</strong> (<em>str</em>) – the regular expression for the book</p></li>
+<li><p><strong>abbreviations</strong> (<em>tuple</em><em>[</em><em>str</em><em>, </em><em>...</em><em>]</em>) – the allowed title abbreviations for the book</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
-<div class="table-wrapper"><table class="colwidths-given docutils align-default" id="id35">
-<caption><span class="caption-text">Book Members</span><a class="headerlink" href="#id35" title="Permalink to this table">#</a></caption>
+
+<div class="table-wrapper colwidths-given docutils container" id="id34">
+<table class="colwidths-given docutils align-default" id="id34">
+<caption><span class="caption-text">Book Members</span><a class="headerlink" href="#id34" title="Permalink to this table">#</a></caption>
 <colgroup>
-<col style="width: 43%"/>
-<col style="width: 14%"/>
-<col style="width: 43%"/>
+<col style="width: 43%" />
+<col style="width: 14%" />
+<col style="width: 43%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -516,32 +523,36 @@
 <td><p>2 Maccabees</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </div>
 <div class="section" id="bookgroup">
 <span id="id2"></span><h2>BookGroup<a class="headerlink" href="#bookgroup" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="BookGroup">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">BookGroup</span></span><a class="headerlink" href="#BookGroup" title="Permalink to this definition">#</a></dt>
-<dd><p>BookGroup is an <code class="docutils literal notranslate"><span class="pre">Enum</span></code> containing the default Bible book groupings</p>
+<dt class="sig sig-object py" id="pythonbible.BookGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">BookGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.BookGroup" title="Permalink to this definition">#</a></dt>
+<dd><p>BookGroup is an <code class="docutils literal notranslate"><span class="pre">Enum</span></code> containing the default Bible book groupings.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – the unique text identifier of the book group</p></li>
 <li><p><strong>value</strong> (<em>int</em>) – the unique numerical identifier of the book group</p></li>
-<li><p><strong>regular_expression</strong> (<em>str</em>) – the regular expression used to find mentions of the book group when searching for references</p></li>
-<li><p><strong>books</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – the list of books included in the book group</p></li>
+<li><p><strong>regular_expression</strong> (<em>str</em>) – the regular expression used to find mentions of the
+book group when searching for references</p></li>
+<li><p><strong>books</strong> (<em>tuple</em><em>[</em><a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a><em>, </em><em>...</em><em>]</em>) – the list of books included in the book group</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
-<div class="table-wrapper"><table class="colwidths-given docutils align-default" id="id36">
-<caption><span class="caption-text">Book Group Members</span><a class="headerlink" href="#id36" title="Permalink to this table">#</a></caption>
+
+<div class="table-wrapper colwidths-given docutils container" id="id35">
+<table class="colwidths-given docutils align-default" id="id35">
+<caption><span class="caption-text">Book Group Members</span><a class="headerlink" href="#id35" title="Permalink to this table">#</a></caption>
 <colgroup>
-<col style="width: 33%"/>
-<col style="width: 11%"/>
-<col style="width: 22%"/>
-<col style="width: 33%"/>
+<col style="width: 33%" />
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 33%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -622,7 +633,8 @@
 <td><p>Revelation</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 </div>
 <div class="section" id="book-groups">
 <span id="id3"></span><h2>BOOK_GROUPS<a class="headerlink" href="#book-groups" title="Permalink to this headline">#</a></h2>
@@ -634,71 +646,75 @@
 <span id="id4"></span><h2>convert_reference_to_verse_ids<a class="headerlink" href="#convert-reference-to-verse-ids" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.convert_reference_to_verse_ids">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">convert_reference_to_verse_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.convert_reference_to_verse_ids" title="Permalink to this definition">#</a></dt>
-<dd><p>Converts the given <a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a> object into a list of verse id integers.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">convert_reference_to_verse_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pythonbible.convert_reference_to_verse_ids" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert the given NormalizedReference object into a tuple of verse id integers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>reference</strong> (<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>) – A normalized reference</p>
+<dd class="field-odd"><p><strong>reference</strong> (<a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a>) – A normalized reference</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The list of verse ids associated with the reference</p>
+<dd class="field-even"><p>The tuple of verse ids associated with the reference</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[int]</p>
+<dd class="field-odd"><p>tuple[int, …]</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="convert-references-to-verse-ids">
 <span id="id5"></span><h2>convert_references_to_verse_ids<a class="headerlink" href="#convert-references-to-verse-ids" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.convert_references_to_verse_ids">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">convert_references_to_verse_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.convert_references_to_verse_ids" title="Permalink to this definition">#</a></dt>
-<dd><p>Converts the given list of <a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a> objects into a list of verse id integers.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">convert_references_to_verse_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pythonbible.convert_references_to_verse_ids" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert a list of NormalizedReference objects into a list of verse id integers.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>references</strong> (List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]) – A list of normalized references</p>
+<dd class="field-odd"><p><strong>references</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a><em>]</em>) – A list of normalized references</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The list of verse ids associated with the references</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[int]</p>
+<dd class="field-odd"><p>list[int]</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="convert-verse-ids-to-references">
 <span id="id6"></span><h2>convert_verse_ids_to_references<a class="headerlink" href="#convert-verse-ids-to-references" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.convert_verse_ids_to_references">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">convert_verse_ids_to_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.convert_verse_ids_to_references" title="Permalink to this definition">#</a></dt>
-<dd><p>Converts the given list of verse id integers into a list of <a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a> objects.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">convert_verse_ids_to_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pythonbible.convert_verse_ids_to_references" title="Permalink to this definition">#</a></dt>
+<dd><p>Convert a list of verse ids into a list of NormalizedReferences.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>verse_ids</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – A list of verse ids</p>
+<dd class="field-odd"><p><strong>verse_ids</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – A list of verse ids</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The list of normalized references associated with the verse ids</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]</p>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference">NormalizedReference</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if one or more of the verse_ids does not correspond to a valid verse</p>
+<dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if one or more of the verse_ids does not correspond to
+a valid verse</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="count-books">
 <span id="id7"></span><h2>count_books<a class="headerlink" href="#count-books" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.count_books">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">count_books</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.count_books" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the count of books of the Bible included in the given list of references.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">count_books</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.count_books" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the count of books of the Bible included in the given list of references.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>references</strong> (List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]) – A list of normalized references</p>
+<dd class="field-odd"><p><strong>references</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a><em>]</em>) – A list of normalized references</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The count of books of the Bible included in the given list of references</p>
@@ -708,35 +724,38 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="count-chapters">
 <span id="id8"></span><h2>count_chapters<a class="headerlink" href="#count-chapters" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.count_chapters">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">count_chapters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.count_chapters" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the count of chapters of books the Bible included in the given list of references.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">count_chapters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.count_chapters" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the count of chapters in the given list of references.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>references</strong> (List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]) – A list of normalized references</p>
+<dd class="field-odd"><p><strong>references</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a><em>]</em>) – A list of normalized references</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The count of chapters of books of the Bible included in the given list of references</p>
+<dd class="field-even"><p>The count of chapters of books of the Bible included in the given list of
+references</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="count-verses">
 <span id="id9"></span><h2>count_verses<a class="headerlink" href="#count-verses" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.count_verses">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">count_verses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.count_verses" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the count of verses included in the given list of references.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">count_verses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.count_verses" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the count of verses included in the given list of references.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>references</strong> (List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]) – A list of normalized references</p>
+<dd class="field-odd"><p><strong>references</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a><em>]</em>) – A list of normalized references</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The count of verses included in the given list of references</p>
@@ -746,16 +765,17 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="format-scripture-references">
 <span id="id10"></span><h2>format_scripture_references<a class="headerlink" href="#format-scripture-references" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.format_scripture_references">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">format_scripture_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.format_scripture_references" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a human-readable string of the given normalized scripture references</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">format_scripture_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">references</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><span class="pre">NormalizedReference</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pythonbible.format_scripture_references" title="Permalink to this definition">#</a></dt>
+<dd><p>Return a human-readable string of the given normalized scripture references.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>references</strong> (List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]) – A list of normalized scripture references</p>
+<dd class="field-odd"><p><strong>references</strong> (<em>list</em><em>[</em><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a><em>]</em>) – A list of normalized scripture references</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>A human-readable string of the given normalized scripture references</p>
@@ -765,16 +785,17 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="format-scripture-text">
 <span id="id11"></span><h2>format_scripture_text<a class="headerlink" href="#format-scripture-text" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.format_scripture_text">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">format_scripture_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_ids</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.format_scripture_text" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the formatted scripture text for the given list of verse IDs.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">format_scripture_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pythonbible.format_scripture_text" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the formatted scripture text for the given list of verse IDs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>verse_ids</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) – A list of integer verse ids</p>
+<dd class="field-odd"><p><strong>verse_ids</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) – A list of integer verse ids</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The formatted scripture text for the verse ids</p>
@@ -784,19 +805,22 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="format-single-reference">
 <span id="id12"></span><h2>format_single_reference<a class="headerlink" href="#format-single-reference" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.format_single_reference">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">format_single_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_books</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_chapters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.format_single_reference" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns a human-readable string of the given normalized scripture reference</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">format_single_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><span class="pre">NormalizedReference</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_books</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_chapters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pythonbible.format_single_reference" title="Permalink to this definition">#</a></dt>
+<dd><p>Return a human-readable string of the given normalized scripture reference.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>reference</strong> (<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>) – A normalized scripture reference</p></li>
-<li><p><strong>include_books</strong> (<em>bool</em>) – If True includes the book title(s) in the returned reference string, defaults to True</p></li>
-<li><p><strong>include_chapters</strong> (<em>bool</em>) – If True includes the chapter number(s) in the returned reference string, defaults to True</p></li>
+<li><p><strong>reference</strong> (<a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a>) – A normalized scripture reference</p></li>
+<li><p><strong>include_books</strong> (<em>bool</em>) – If True includes the book title(s) in the returned reference
+string, defaults to True</p></li>
+<li><p><strong>include_chapters</strong> (<em>bool</em>) – If True includes the chapter number(s) in the returned
+reference string, defaults to True</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -807,35 +831,38 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-book-chapter-verse">
 <span id="id13"></span><h2>get_book_chapter_verse<a class="headerlink" href="#get-book-chapter-verse" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_book_chapter_verse">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_book_chapter_verse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_book_chapter_verse" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>, chapter number, and verse number for the given verse id</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_book_chapter_verse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pythonbible.get_book_chapter_verse" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the Book, chapter number, and verse number for the given verse id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>verse_id</strong> (<em>int</em>) – a verse id</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>A tuple containing the <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>, chapter number, and verse number for the given verse id</p>
+<dd class="field-even"><p>A tuple containing the Book, chapter number, and verse number for the
+given verse id</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Tuple[<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>, int, int]</p>
+<dd class="field-odd"><p>tuple[<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book">Book</a>, int, int]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if the verse id does not correspond to a valid verse</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-book-number">
 <span id="id14"></span><h2>get_book_number<a class="headerlink" href="#get-book-number" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_book_number">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_book_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_book_number" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the book number for the given verse id</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_book_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.get_book_number" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the book number for the given verse id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>verse_id</strong> (<em>int</em>) – a verse id</p>
@@ -848,38 +875,41 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-book-titles">
 <span id="id15"></span><h2>get_book_titles<a class="headerlink" href="#get-book-titles" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_book_titles">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_book_titles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_book_titles" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the book titles for the given <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a> and optional <a class="reference internal" href="#version"><span class="std std-ref">Version</span></a></p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_book_titles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><span class="pre">Book</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Version" title="pythonbible.Version"><span class="pre">Version</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Version.AMERICAN_STANDARD</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BookTitles</span></span></span><a class="headerlink" href="#pythonbible.get_book_titles" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the book titles for the given Book and optional Version.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p></li>
-<li><p><strong>version</strong> (<a class="reference internal" href="#version"><span class="std std-ref">Version</span></a>) – a version of the Bible, defaults to American Standard</p></li>
+<li><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p></li>
+<li><p><strong>version</strong> (<a class="reference internal" href="#pythonbible.Version" title="pythonbible.Version"><em>Version</em></a>) – a version of the Bible, defaults to American Standard</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>the long and short titles of the given book and version</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Optional[BookTitles]</p>
+<dd class="field-odd"><p>BookTitles</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="#pythonbible.MissingBookFileError" title="pythonbible.MissingBookFileError"><strong>MissingBookFileError</strong></a> – if the book file for the given book and version does not exist</p>
+<dd class="field-even"><p><a class="reference internal" href="#pythonbible.MissingBookFileError" title="pythonbible.MissingBookFileError"><strong>MissingBookFileError</strong></a> – if the book file for the given book and version does
+not exist</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-chapter-number">
 <span id="id16"></span><h2>get_chapter_number<a class="headerlink" href="#get-chapter-number" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_chapter_number">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_chapter_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_chapter_number" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the chapter number for the given verse id</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_chapter_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.get_chapter_number" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the chapter number for the given verse id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>verse_id</strong> (<em>int</em>) – a verse id</p>
@@ -892,16 +922,17 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-number-of-chapters">
 <span id="id17"></span><h2>get_number_of_chapters<a class="headerlink" href="#get-number-of-chapters" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_number_of_chapters">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_number_of_chapters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_number_of_chapters" title="Permalink to this definition">#</a></dt>
-<dd><p>Return the number of chapters in a <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a> of the Bible</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_number_of_chapters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.get_number_of_chapters" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the number of chapters in a Book of the Bible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p>
+<dd class="field-odd"><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>the number of chapters in the given book of the Bible</p>
@@ -911,17 +942,18 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-number-of-verses">
 <span id="id18"></span><h2>get_number_of_verses<a class="headerlink" href="#get-number-of-verses" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_number_of_verses">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_number_of_verses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_number_of_verses" title="Permalink to this definition">#</a></dt>
-<dd><p>Return the number of verses in a <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a> and chapter</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_number_of_verses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.get_number_of_verses" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the number of verses in a Book and chapter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p></li>
+<li><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p></li>
 <li><p><strong>chapter</strong> (<em>int</em>) – a chapter of the given book of the Bible</p></li>
 </ul>
 </dd>
@@ -932,43 +964,48 @@
 <dd class="field-odd"><p>int</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidChapterError" title="pythonbible.InvalidChapterError"><strong>InvalidChapterError</strong></a> – if the given chapter isn’t a valid chapter for the given book</p>
+<dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidChapterError" title="pythonbible.InvalidChapterError"><strong>InvalidChapterError</strong></a> – if the given chapter isn’t a valid chapter for the
+given book</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-references">
 <span id="id19"></span><h2>get_references<a class="headerlink" href="#get-references" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_references">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">book_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_references" title="Permalink to this definition">#</a></dt>
-<dd><p>Searches the text for scripture references and returns any that are found in a list of normalized tuple references.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_references</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">book_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#pythonbible.get_references" title="Permalink to this definition">#</a></dt>
+<dd><p>Search the text for scripture references and return any that are found in a list
+of normalized tuple references.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> (<em>str</em>) – String that may contain zero or more scripture references</p></li>
-<li><p><strong>book_groups</strong> (Dict[str, List[<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>]] or None) – Optional dictionary of <a class="reference internal" href="#bookgroup"><span class="std std-ref">BookGroup</span></a> (e.g. Old Testament) to its related regular expression</p></li>
+<li><p><strong>book_groups</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>tuple</em><em>[</em><a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a><em>, </em><em>...</em><em>]</em><em>] or </em><em>None</em>) – Optional dictionary of BookGroup (e.g. Old Testament) to its
+related regular expression</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The list of found scripture references</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List[<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>]</p>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference">NormalizedReference</a>]</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-verse-id">
 <span id="id20"></span><h2>get_verse_id<a class="headerlink" href="#get-verse-id" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_verse_id">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_verse_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_verse_id" title="Permalink to this definition">#</a></dt>
-<dd><p>Return the verse id for the given <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>, chapter number, and verse number</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_verse_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.get_verse_id" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the verse id for the given Book, chapter number, and verse number.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p></li>
+<li><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p></li>
 <li><p><strong>chapter</strong> (<em>int</em>) – a chapter number for the given book of the Bible</p></li>
 <li><p><strong>verse</strong> (<em>int</em>) – a verse number for the given book and chapter</p></li>
 </ul>
@@ -980,17 +1017,19 @@
 <dd class="field-odd"><p>int</p>
 </dd>
 <dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if the verse doesn’t exist for the given book, chapter, and verse</p>
+<dd class="field-even"><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if the verse doesn’t exist for the given book, chapter,
+and verse</p>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-verse-number">
 <span id="id21"></span><h2>get_verse_number<a class="headerlink" href="#get-verse-number" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_verse_number">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_verse_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_verse_number" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the verse number for the given verse id</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_verse_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#pythonbible.get_verse_number" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the verse number for the given verse id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>verse_id</strong> (<em>int</em>) – a verse id</p>
@@ -1003,18 +1042,19 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="get-verse-text">
 <span id="id22"></span><h2>get_verse_text<a class="headerlink" href="#get-verse-text" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.get_verse_text">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_verse_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.get_verse_text" title="Permalink to this definition">#</a></dt>
-<dd><p>Returns the scripture text of the given verse id and version of the Bible.</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">get_verse_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Version" title="pythonbible.versions.Version"><span class="pre">pythonbible.versions.Version</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">Version.AMERICAN_STANDARD</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pythonbible.get_verse_text" title="Permalink to this definition">#</a></dt>
+<dd><p>Return the scripture text of the given verse id and version of the Bible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>verse_id</strong> (<em>int</em>) – a verse id</p></li>
-<li><p><strong>version</strong> (<a class="reference internal" href="#version"><span class="std std-ref">Version</span></a>) – a version of the Bible, defaults to American Standard</p></li>
+<li><p><strong>version</strong> (<a class="reference internal" href="#pythonbible.Version" title="pythonbible.Version"><em>Version</em></a>) – a version of the Bible, defaults to American Standard</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -1025,46 +1065,54 @@
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if the given verse id does not correspond to a valid verse</p></li>
-<li><p><a class="reference internal" href="#pythonbible.MissingVerseFileError" title="pythonbible.MissingVerseFileError"><strong>MissingVerseFileError</strong></a> – if the verse file for the given verse_id and version does not exist</p></li>
+<li><p><a class="reference internal" href="#pythonbible.InvalidVerseError" title="pythonbible.InvalidVerseError"><strong>InvalidVerseError</strong></a> – if the given verse id does not correspond to a valid
+verse</p></li>
+<li><p><a class="reference internal" href="#pythonbible.MissingVerseFileError" title="pythonbible.MissingVerseFileError"><strong>MissingVerseFileError</strong></a> – if the verse file for the given verse_id and version
+does not exist</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="invalidbookerror">
 <span id="id23"></span><h2>InvalidBookError<a class="headerlink" href="#invalidbookerror" title="Permalink to this headline">#</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="pythonbible.InvalidBookError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">InvalidBookError</span></span><a class="headerlink" href="#pythonbible.InvalidBookError" title="Permalink to this definition">#</a></dt>
-<dd><p>Raised when the book id is not valid</p>
+<dd><p>Raised when the book id is not valid.</p>
 </dd></dl>
+
 </div>
 <div class="section" id="invalidchaptererror">
 <span id="id24"></span><h2>InvalidChapterError<a class="headerlink" href="#invalidchaptererror" title="Permalink to this headline">#</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="pythonbible.InvalidChapterError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">InvalidChapterError</span></span><a class="headerlink" href="#pythonbible.InvalidChapterError" title="Permalink to this definition">#</a></dt>
-<dd><p>Raised when the chapter number is not a valid chapter number for the given book of the Bible</p>
+<dd><p>Raised when the chapter number is not valid for the given book of the Bible.</p>
 </dd></dl>
+
 </div>
 <div class="section" id="invalidverseerror">
 <span id="id25"></span><h2>InvalidVerseError<a class="headerlink" href="#invalidverseerror" title="Permalink to this headline">#</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="pythonbible.InvalidVerseError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">InvalidVerseError</span></span><a class="headerlink" href="#pythonbible.InvalidVerseError" title="Permalink to this definition">#</a></dt>
-<dd><p>Raised when the verse id or book, chapter, and verse number being processed is not a valid Bible verse</p>
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">InvalidVerseError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><span class="pre">Book</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.InvalidVerseError" title="Permalink to this definition">#</a></dt>
+<dd><p>Raised when the verse id is not a valid Bible verse.</p>
+<p>Or raised when the book, chapter, and verse number being processed is not a valid
+Bible verse.</p>
 </dd></dl>
+
 </div>
 <div class="section" id="is-valid-book">
 <span id="id26"></span><h2>is_valid_book<a class="headerlink" href="#is-valid-book" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.is_valid_book">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.is_valid_book" title="Permalink to this definition">#</a></dt>
-<dd><p>Checks to see if the given <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a> is a valid book of the Bible</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pythonbible.is_valid_book" title="Permalink to this definition">#</a></dt>
+<dd><p>Check to see if the given book is a valid book of the Bible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p>
+<dd class="field-odd"><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>True if the given book is valid; otherwise, False</p>
@@ -1074,17 +1122,20 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="is-valid-chapter">
 <span id="id27"></span><h2>is_valid_chapter<a class="headerlink" href="#is-valid-chapter" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.is_valid_chapter">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_chapter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.is_valid_chapter" title="Permalink to this definition">#</a></dt>
-<dd><p>Checks to see if the given <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a> is a valid book of the Bible; and, if so, checks to see if the given chapter number is a valid chapter number for the given book</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_chapter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pythonbible.is_valid_chapter" title="Permalink to this definition">#</a></dt>
+<dd><p>Check to see if the given Book is a valid book of the Bible.</p>
+<p>If so, checks to see if the given chapter number is a valid chapter number for the
+given book.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p></li>
+<li><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p></li>
 <li><p><strong>chapter</strong> (<em>int</em>) – a chapter number for the given book of the Bible</p></li>
 </ul>
 </dd>
@@ -1096,16 +1147,18 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="is-valid-reference">
-<span id="id28"></span><h2>is_valid_reference<a class="headerlink" href="#is-valid-reference" title="Permalink to this headline">#</a></h2>
+<h2>is_valid_reference<a class="headerlink" href="#is-valid-reference" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.is_valid_reference">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.is_valid_reference" title="Permalink to this definition">#</a></dt>
-<dd><p>Checks to see if the given <a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a> is a valid scripture reference (i.e. all of the verses in the reference are valid verses)</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.normalized_reference.NormalizedReference"><span class="pre">pythonbible.normalized_reference.NormalizedReference</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pythonbible.is_valid_reference" title="Permalink to this definition">#</a></dt>
+<dd><p>Check to see if the given NormalizedReference is a valid scripture reference.</p>
+<p>(i.e. all of the verses in the reference are valid verses)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>reference</strong> (<a class="reference internal" href="#normalizedreference"><span class="std std-ref">NormalizedReference</span></a>) – a normalized reference</p>
+<dd class="field-odd"><p><strong>reference</strong> (<a class="reference internal" href="#pythonbible.NormalizedReference" title="pythonbible.NormalizedReference"><em>NormalizedReference</em></a>) – a normalized reference</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>True if the reference is valid; otherwise, False</p>
@@ -1115,17 +1168,21 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="is-valid-verse">
-<span id="id29"></span><h2>is_valid_verse<a class="headerlink" href="#is-valid-verse" title="Permalink to this headline">#</a></h2>
+<span id="id28"></span><h2>is_valid_verse<a class="headerlink" href="#is-valid-verse" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.is_valid_verse">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_verse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verse</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.is_valid_verse" title="Permalink to this definition">#</a></dt>
-<dd><p>Checks to see if the given <a class="reference internal" href="#book"><span class="std std-ref">Book</span></a> is a valid book of the Bible, then checks to see if the given chapter number is a valid chapter number for the given book, then checks to see if the given verse number is a valid verse number for the given book and chapter</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_verse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.books.Book"><span class="pre">pythonbible.books.Book</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pythonbible.is_valid_verse" title="Permalink to this definition">#</a></dt>
+<dd><p>Check to see if the given Book is a valid book of the Bible.</p>
+<p>Then checks to see if the given chapter number is a valid chapter number for the
+given book, then checks to see if the given verse number is a valid verse number
+for the given book and chapter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – a book of the Bible</p></li>
+<li><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – a book of the Bible</p></li>
 <li><p><strong>chapter</strong> (<em>int</em>) – a chapter number for the given book of the Bible</p></li>
 <li><p><strong>verse</strong> (<em>int</em>) – a verse number for the given book and chapter</p></li>
 </ul>
@@ -1138,13 +1195,14 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="is-valid-verse-id">
-<span id="id30"></span><h2>is_valid_verse_id<a class="headerlink" href="#is-valid-verse-id" title="Permalink to this headline">#</a></h2>
+<span id="id29"></span><h2>is_valid_verse_id<a class="headerlink" href="#is-valid-verse-id" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pythonbible.is_valid_verse_id">
-<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_verse_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.is_valid_verse_id" title="Permalink to this definition">#</a></dt>
-<dd><p>Checks to see if the given verse_id corresponds to a valid verse in the Bible</p>
+<span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">is_valid_verse_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verse_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#pythonbible.is_valid_verse_id" title="Permalink to this definition">#</a></dt>
+<dd><p>Check to see if the given verse_id corresponds to a valid verse in the Bible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>verse_id</strong> (<em>int</em>) – a verse id</p>
@@ -1157,59 +1215,68 @@
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="missingbookfileerror">
-<span id="id31"></span><h2>MissingBookFileError<a class="headerlink" href="#missingbookfileerror" title="Permalink to this headline">#</a></h2>
+<span id="id30"></span><h2>MissingBookFileError<a class="headerlink" href="#missingbookfileerror" title="Permalink to this headline">#</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="pythonbible.MissingBookFileError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">MissingBookFileError</span></span><a class="headerlink" href="#pythonbible.MissingBookFileError" title="Permalink to this definition">#</a></dt>
-<dd><p>Raised when the book file for a given version is not found</p>
+<dd><p>Raised when the book file for a given version is not found.</p>
 </dd></dl>
+
 </div>
 <div class="section" id="missingversefileerror">
-<span id="id32"></span><h2>MissingVerseFileError<a class="headerlink" href="#missingversefileerror" title="Permalink to this headline">#</a></h2>
+<span id="id31"></span><h2>MissingVerseFileError<a class="headerlink" href="#missingversefileerror" title="Permalink to this headline">#</a></h2>
 <dl class="py exception">
 <dt class="sig sig-object py" id="pythonbible.MissingVerseFileError">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">MissingVerseFileError</span></span><a class="headerlink" href="#pythonbible.MissingVerseFileError" title="Permalink to this definition">#</a></dt>
-<dd><p>Raised when the verse file for a given version is not found</p>
+<dd><p>Raised when the verse file for a given version is not found.</p>
 </dd></dl>
+
 </div>
 <div class="section" id="normalizedreference">
-<span id="id33"></span><h2>NormalizedReference<a class="headerlink" href="#normalizedreference" title="Permalink to this headline">#</a></h2>
+<span id="id32"></span><h2>NormalizedReference<a class="headerlink" href="#normalizedreference" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pythonbible.NormalizedReference">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">NormalizedReference</span></span><a class="headerlink" href="#pythonbible.NormalizedReference" title="Permalink to this definition">#</a></dt>
-<dd><p>NormalizedReference is a dataclass that represents a single scripture reference that contains one or more consecutive verses</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">NormalizedReference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><span class="pre">Book</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_verse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_chapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_verse</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_book</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><span class="pre">Book</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.NormalizedReference" title="Permalink to this definition">#</a></dt>
+<dd><p>NormalizedReference is a dataclass that represents a single scripture reference
+that contains one or more consecutive verses.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – the first book of the Bible in the reference</p></li>
+<li><p><strong>book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – the first book of the Bible in the reference</p></li>
 <li><p><strong>start_chapter</strong> (<em>int</em>) – the number of the first chapter in the reference</p></li>
 <li><p><strong>start_verse</strong> (<em>int</em>) – the number of the first verse in the reference</p></li>
 <li><p><strong>end_chapter</strong> (<em>int</em>) – the number of the last chapter in the reference</p></li>
 <li><p><strong>end_verse</strong> (<em>int</em>) – the number of the last verse in the reference</p></li>
-<li><p><strong>end_book</strong> (<a class="reference internal" href="#book"><span class="std std-ref">Book</span></a>) – the last book of the Bible in the reference if the reference contains more than one book, defaults to None</p></li>
+<li><p><strong>end_book</strong> (<a class="reference internal" href="#pythonbible.Book" title="pythonbible.Book"><em>Book</em></a>) – the last book of the Bible in the reference if the reference
+contains more than one book, defaults to None</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 <div class="section" id="version">
-<span id="id34"></span><h2>Version<a class="headerlink" href="#version" title="Permalink to this headline">#</a></h2>
+<span id="id33"></span><h2>Version<a class="headerlink" href="#version" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pythonbible.Version">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">Version</span></span><a class="headerlink" href="#pythonbible.Version" title="Permalink to this definition">#</a></dt>
-<dd><p>Version is an <code class="docutils literal notranslate"><span class="pre">Enum</span></code> containing all of the currently known Ancient Language and English versions of the Bible</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pythonbible.</span></span><span class="sig-name descname"><span class="pre">Version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pythonbible.Version" title="Permalink to this definition">#</a></dt>
+<dd><p>Version of the Bible.</p>
+<p>Version is an Enum containing all the currently known Ancient Language
+and English versions of the Bible.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – the unique text identifier of the version</p></li>
-<li><p><strong>value</strong> (<em>int</em>) – the unique numerical identifier of the version</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – the unique abbreviated identifier of the version</p></li>
 <li><p><strong>title</strong> (<em>str</em>) – the English title of the version</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
+
 </div>
 </div>
 

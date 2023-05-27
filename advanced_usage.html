@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Technical Reference" href="technical_reference.html" /><link rel="prev" title="Book Abbreviations" href="book_abbreviations.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.4.0, furo 2022.03.04"/>
-        <title>Advanced Usage - pythonbible 0.7 documentation</title>
+    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
+        <title>Advanced Usage - pythonbible 0.10.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=935aa2abcc5c1da4283d1dc201fb1f0add16d23a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -37,10 +37,12 @@
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -122,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pythonbible 0.7 documentation</div></a>
+      <a href="index.html"><div class="brand">pythonbible 0.10.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -181,7 +183,8 @@
           </svg>
           <span>Back to top</span>
         </a>
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -200,6 +203,11 @@
 <div class="section" id="single-chapter-books">
 <h2>Single Chapter Books<a class="headerlink" href="#single-chapter-books" title="Permalink to this headline">#</a></h2>
 <p>Several books of the Bible only contain one chapter, and there is some special functionality in pythonbible related to this.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To try any of the single chapter book features in an interactive jupyter notebook, download this
+<a class="reference download internal" download="" href="_downloads/f7b48c7475a4eefb77662f571eb4d565/pythonbible-single-chapter-books.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
+</div>
 <div class="section" id="finding-references">
 <h3>Finding References<a class="headerlink" href="#finding-references" title="Permalink to this headline">#</a></h3>
 <p>When parsing a given text to find all the references contained within, if we find a reference for a single chapter book that contains only one number, rather than both chapter and verse numbers, we assume that number to be the verse number.</p>
@@ -209,7 +217,7 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Obadiah 1"</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Obadiah 1&quot;</span><span class="p">)</span>
 <span class="n">references</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -230,7 +238,7 @@
 <p>If a reference like this was found for a non single chapter book, the number would be assumed to be a chapter number rather than a verse number.</p>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [2]:</div>
-<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis 1"</span><span class="p">)</span>
+<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis 1&quot;</span><span class="p">)</span>
 <span class="n">references</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -256,7 +264,7 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Philemon 3-6"</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Philemon 3-6&quot;</span><span class="p">)</span>
 <span class="n">references</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -279,7 +287,7 @@
 <div class="prompt code-cell-prompt notranslate">In [2]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis 3-6"</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis 3-6&quot;</span><span class="p">)</span>
 <span class="n">references</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -316,28 +324,28 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Jude 2-8"</span><span class="p">)</span>
-<span class="n">bible</span><span class="o">.</span><span class="n">format_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Jude 2-8&quot;</span><span class="p">)</span>
+<span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Jude 2-8'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Jude 2-8&#39;</span>
 </pre></div>
 </div>
 </div>
 <p>The result should be the same even if the the chapter number is included in the original reference string.</p>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [2]:</div>
-<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Jude 1:2-8"</span><span class="p">)</span>
-<span class="n">bible</span><span class="o">.</span><span class="n">format_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
+<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Jude 1:2-8&quot;</span><span class="p">)</span>
+<span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[2]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Jude 2-8'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Jude 2-8&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -349,14 +357,14 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Jude 2-8"</span><span class="p">)</span>
-<span class="n">bible</span><span class="o">.</span><span class="n">format_references</span><span class="p">(</span><span class="n">references</span><span class="p">,</span> <span class="n">always_include_chapter_numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Jude 2-8&quot;</span><span class="p">)</span>
+<span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">,</span> <span class="n">always_include_chapter_numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Jude 1:2-8'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Jude 1:2-8&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -372,6 +380,11 @@
 <li><p>Genesis 1 - Deuteronomy 34</p></li>
 <li><p>Genesis 1:1 - Deuteronomy 34:12</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To try any of the multi book reference features in an interactive jupyter notebook, download this
+<a class="reference download internal" download="" href="_downloads/400aa35812b74236a1fdec03f7aaed65/pythonbible-multi-book-references.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
+</div>
 <div class="section" id="id1">
 <h3>Finding References<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>When parsing a given text to find all the references contained within, if we find a ranged reference like those above that span multiple books of the Bible, we should parse that into a single normalized reference that includes the optional end_book attribute.</p>
@@ -380,7 +393,7 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis - Deuteronomy"</span><span class="p">)</span>
+<span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis - Deuteronomy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -395,7 +408,7 @@
 <p>If rather than using the range, the text specified each book of the Bible separated by a comma or semi-colon (or just about anything), then the result would be a list of five normalized references, one for each of the five books referenced.</p>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [2]:</div>
-<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis;Exodus;Leviticus;Numbers;Deuteronomy"</span><span class="p">)</span>
+<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis;Exodus;Leviticus;Numbers;Deuteronomy&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -414,7 +427,7 @@
 <p>That list can optionally be optimized by converting it to verse ids and then back into references if so desired.</p>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [3]:</div>
-<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis;Exodus;Leviticus;Numbers;Deuteronomy"</span><span class="p">)</span>
+<div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis;Exodus;Leviticus;Numbers;Deuteronomy&quot;</span><span class="p">)</span>
 <span class="n">verse_ids</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">convert_references_to_verse_ids</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
 <span class="n">bible</span><span class="o">.</span><span class="n">convert_verse_ids_to_references</span><span class="p">(</span><span class="n">verse_ids</span><span class="p">)</span>
 </pre></div>
@@ -446,14 +459,14 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis - Deuteronomy"</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis - Deuteronomy&quot;</span><span class="p">)</span>
 <span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Genesis - Deuteronomy'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Genesis - Deuteronomy&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -465,14 +478,14 @@
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"Genesis - Deuteronomy"</span><span class="p">)</span>
+<span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;Genesis - Deuteronomy&quot;</span><span class="p">)</span>
 <span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">,</span> <span class="n">always_include_chapter_numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[1]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Genesis 1:1 - Deuteronomy 34:12'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Genesis 1:1 - Deuteronomy 34:12&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -507,15 +520,20 @@
 <li><p>Pauline Epistles (Romans - Philemon)</p></li>
 <li><p>General Epistles (Hebrews - Jude)</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To try any of the book group features in an interactive jupyter notebook, download this
+<a class="reference download internal" download="" href="_downloads/f75cd6b78da66c94c9240c9159ff8365/pythonbible-book-groups.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
+</div>
 <div class="section" id="finding-references-by-book-groups">
 <h3>Finding References by Book Groups<a class="headerlink" href="#finding-references-by-book-groups" title="Permalink to this headline">#</a></h3>
-<p>By default, when pythonbible parses text to find all references contained within, it does not take book groups into consideration.</p>
+<p>By default, when <strong>pythonbible</strong> parses text to find all references contained within, it does not take book groups into consideration.</p>
 <p>For example:</p>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
-<span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">"What are all of the books of the Old Testament?"</span><span class="p">)</span>
+<span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span><span class="s2">&quot;What are all of the books of the Old Testament?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -535,7 +553,7 @@
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
 <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"What are all of the books of the Old Testament?"</span><span class="p">,</span>
+    <span class="s2">&quot;What are all of the books of the Old Testament?&quot;</span><span class="p">,</span>
     <span class="n">book_groups</span><span class="o">=</span><span class="n">bible</span><span class="o">.</span><span class="n">BOOK_GROUPS</span>
 <span class="p">)</span>
 </pre></div>
@@ -554,7 +572,7 @@
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [2]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"What are all of the books of the Old Testament?"</span><span class="p">,</span>
+    <span class="s2">&quot;What are all of the books of the Old Testament?&quot;</span><span class="p">,</span>
     <span class="n">book_groups</span><span class="o">=</span><span class="n">bible</span><span class="o">.</span><span class="n">BOOK_GROUPS</span>
 <span class="p">)</span>
 <span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span>
@@ -563,7 +581,7 @@
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[2]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Genesis - Malachi'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Genesis - Malachi&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -579,7 +597,7 @@
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[3]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'Genesis 1:1 - Malachi 4:6'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Genesis 1:1 - Malachi 4:6&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -587,7 +605,7 @@
 <div class="section" id="finding-references-by-custom-book-groups">
 <h4>Finding References by Custom Book Groups<a class="headerlink" href="#finding-references-by-custom-book-groups" title="Permalink to this headline">#</a></h4>
 <p>If you don’t want to use the book groups as defined above but rather a subset of them or additional categorizations or completely custom categorizations, you can do that by passing in a custom value for the <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> optional argument of the <code class="docutils literal notranslate"><span class="pre">get_references</span></code> function.</p>
-<p>The expected type of the <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> argument is a <code class="docutils literal notranslate"><span class="pre">Dict[str,</span> <span class="pre">List[Book]]</span></code> where the string key is a regular expression to be used to match to that particular book group, and the list of <a class="reference internal" href="technical_reference.html#book"><span class="std std-ref">Book</span></a> objects are the books of the Bible associated with that book group.</p>
+<p>The expected type of the <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> argument is a <code class="docutils literal notranslate"><span class="pre">dict[str,</span> <span class="pre">list[Book]]</span></code> where the string key is a regular expression to be used to match to that particular book group, and the list of <a class="reference internal" href="technical_reference.html#book"><span class="std std-ref">Book</span></a> objects are the books of the Bible associated with that book group.</p>
 <p>There is a <a class="reference internal" href="technical_reference.html#bookgroup"><span class="std std-ref">BookGroup</span></a> <code class="docutils literal notranslate"><span class="pre">Enum</span></code> included to help with this.</p>
 <p>For example, if you wanted to only use the Old Testament and New Testament book groups, the following example using the default book groups would return too many references.</p>
 <div class="code-cell docutils container">
@@ -595,7 +613,7 @@
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
 
 <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"I want to find the Old Testament books, not the Gospels."</span><span class="p">,</span>
+    <span class="s2">&quot;I want to find the Old Testament books, not the Gospels.&quot;</span><span class="p">,</span>
     <span class="n">book_groups</span><span class="o">=</span><span class="n">bible</span><span class="o">.</span><span class="n">BOOK_GROUPS</span>
 <span class="p">)</span>
 </pre></div>
@@ -618,7 +636,7 @@
     <span class="n">bible</span><span class="o">.</span><span class="n">BookGroup</span><span class="o">.</span><span class="n">NEW_TESTAMENT</span><span class="o">.</span><span class="n">regular_expression</span><span class="p">:</span> <span class="n">bible</span><span class="o">.</span><span class="n">BookGroup</span><span class="o">.</span><span class="n">NEW_TESTAMENT</span><span class="o">.</span><span class="n">books</span><span class="p">,</span>
 <span class="p">}</span>
 <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"I want to find the Old Testament books, not the Gospels."</span><span class="p">,</span>
+    <span class="s2">&quot;I want to find the Old Testament books, not the Gospels.&quot;</span><span class="p">,</span>
     <span class="n">book_groups</span><span class="o">=</span><span class="n">book_groups_subset</span>
 <span class="p">)</span>
 </pre></div>
@@ -637,20 +655,20 @@
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [3]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">custom_book_groups</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"my favorite books"</span><span class="p">:</span> <span class="p">[</span><span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">PSALMS</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">PROVERBS</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">JOHN</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">PHILIPPIANS</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">JAMES</span><span class="p">],</span>
+    <span class="s2">&quot;my favorite books&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">PSALMS</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">PROVERBS</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">JOHN</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">PHILIPPIANS</span><span class="p">,</span> <span class="n">bible</span><span class="o">.</span><span class="n">Book</span><span class="o">.</span><span class="n">JAMES</span><span class="p">],</span>
 <span class="p">}</span>
 <span class="n">references</span> <span class="o">=</span> <span class="n">bible</span><span class="o">.</span><span class="n">get_references</span><span class="p">(</span>
-    <span class="s2">"What are my favorite books of the Bible?"</span><span class="p">,</span>
+    <span class="s2">&quot;What are my favorite books of the Bible?&quot;</span><span class="p">,</span>
     <span class="n">book_groups</span><span class="o">=</span><span class="n">custom_book_groups</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"My favorite books of the Bible are </span><span class="si">{</span><span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span><span class="si">}</span><span class="s2">!"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;My favorite books of the Bible are </span><span class="si">{</span><span class="n">bible</span><span class="o">.</span><span class="n">format_scripture_references</span><span class="p">(</span><span class="n">references</span><span class="p">)</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="output-cell docutils container">
 <div class="prompt output-cell-prompt notranslate">[3]:</div>
-<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">'My favorite books of the Bible are Psalms - Proverbs;John;Philippians;James!'</span>
+<div class="output-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;My favorite books of the Bible are Psalms - Proverbs;John;Philippians;James!&#39;</span>
 </pre></div>
 </div>
 </div>
