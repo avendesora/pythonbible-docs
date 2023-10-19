@@ -1,16 +1,17 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Book Abbreviations" href="book_abbreviations.html" /><link rel="prev" title="Installation" href="installation.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Book Abbreviations" href="book_abbreviations.html" /><link rel="prev" title="Installation" href="installation.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
-        <title>Basic Usage - pythonbible 0.11.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>Basic Usage - pythonbible 0.12.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css?v=4ee5d529" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -124,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pythonbible 0.11.0 documentation</div></a>
+      <a href="index.html"><div class="brand">pythonbible 0.12.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -153,7 +154,7 @@
   
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -184,7 +185,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -198,15 +200,15 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="basic-usage">
-<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">#</a></h1>
+          <section id="basic-usage">
+<h1>Basic Usage<a class="headerlink" href="#basic-usage" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To try any of the basic usage features in an interactive jupyter notebook, download this
 <a class="reference download internal" download="" href="_downloads/99cbd157498e41c0e45c6454492535a8/pythonbible-basic-usage.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
 </div>
-<div class="section" id="finding-scripture-references-in-text">
-<h2>Finding Scripture References in Text<a class="headerlink" href="#finding-scripture-references-in-text" title="Permalink to this headline">#</a></h2>
+<section id="finding-scripture-references-in-text">
+<h2>Finding Scripture References in Text<a class="headerlink" href="#finding-scripture-references-in-text" title="Link to this heading">#</a></h2>
 <p>Given a text, you can search for scripture references and return any that are found in a list of <a class="reference internal" href="technical_reference.html#normalizedreference"><span class="std std-ref">NormalizedReferences</span></a> using the <a class="reference internal" href="technical_reference.html#get-references"><span class="std std-ref">get_references</span></a> function.</p>
 <p>For example, given the text “The parable of the lost sheep is told in Matthew 18:12-14 and Luke 15:3-7.” the <a class="reference internal" href="technical_reference.html#get-references"><span class="std std-ref">get_references</span></a> function should return a list of two <a class="reference internal" href="technical_reference.html#normalizedreference"><span class="std std-ref">NormalizedReferences</span></a>: one for Matthew 18:12-14 and another for Luke 15:3-7.</p>
 <div class="code-cell docutils container">
@@ -228,15 +230,15 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="converting-references-to-verse-ids">
-<h2>Converting References to Verse IDs<a class="headerlink" href="#converting-references-to-verse-ids" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="converting-references-to-verse-ids">
+<h2>Converting References to Verse IDs<a class="headerlink" href="#converting-references-to-verse-ids" title="Link to this heading">#</a></h2>
 <p>Any single verse can be identified by an integer that contains the book, chapter, and verse information. The first 1-2 digits of the integer verse id represent the book, the next 3 digits represent the chapter, and the last 3 digits represent the verse.</p>
 <p>For example, “Genesis 1:1” would be represented as the integer <code class="docutils literal notranslate"><span class="pre">1001001</span></code>.</p>
 <p>“John 3:16” would be represented as <code class="docutils literal notranslate"><span class="pre">43003016</span></code>. The book of John is the 43rd book of the Bible, <code class="docutils literal notranslate"><span class="pre">003</span></code> represents the 3rd chapter, and <code class="docutils literal notranslate"><span class="pre">016</span></code> represents the 16th verse.</p>
 <p>Since the book, chapter, and verses are standardized and unlikely to change, this allows us to reference verses in a very efficient way.</p>
-<div class="section" id="converting-a-single-reference-to-a-list-of-verse-ids">
-<h3>Converting a Single Reference to a List of Verse IDs<a class="headerlink" href="#converting-a-single-reference-to-a-list-of-verse-ids" title="Permalink to this headline">#</a></h3>
+<section id="converting-a-single-reference-to-a-list-of-verse-ids">
+<h3>Converting a Single Reference to a List of Verse IDs<a class="headerlink" href="#converting-a-single-reference-to-a-list-of-verse-ids" title="Link to this heading">#</a></h3>
 <p>Given a normalized scripture reference, which can contain one or more verses, the <a class="reference internal" href="technical_reference.html#convert-reference-to-verse-ids"><span class="std std-ref">convert_reference_to_verse_ids</span></a> function will convert that normalized scripture reference into a list of verse id integers.</p>
 <p>For example, given the following normalized scripture reference for Genesis 1:1-4:</p>
 <div class="code-cell docutils container">
@@ -256,9 +258,9 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="converting-a-list-of-references-to-a-list-of-verse-ids">
-<h3>Converting a List of References to a List of Verse IDs<a class="headerlink" href="#converting-a-list-of-references-to-a-list-of-verse-ids" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="converting-a-list-of-references-to-a-list-of-verse-ids">
+<h3>Converting a List of References to a List of Verse IDs<a class="headerlink" href="#converting-a-list-of-references-to-a-list-of-verse-ids" title="Link to this heading">#</a></h3>
 <p>If you need to convert a list of references (rather than a single reference) to a list of verse ids, use the <a class="reference internal" href="technical_reference.html#convert-references-to-verse-ids"><span class="std std-ref">convert_references_to_verse_ids</span></a> function rather than the <a class="reference internal" href="technical_reference.html#convert-reference-to-verse-ids"><span class="std std-ref">convert_reference_to_verse_ids</span></a> function.</p>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
@@ -277,10 +279,10 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="converting-verse-ids-to-references">
-<h2>Converting Verse IDs to References<a class="headerlink" href="#converting-verse-ids-to-references" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="converting-verse-ids-to-references">
+<h2>Converting Verse IDs to References<a class="headerlink" href="#converting-verse-ids-to-references" title="Link to this heading">#</a></h2>
 <p>We can also take a list of integer verse ids and convert it back into a list of normalized references using the <a class="reference internal" href="technical_reference.html#convert-verse-ids-to-references"><span class="std std-ref">convert_verse_ids_to_references</span></a> function.</p>
 <p>For example, the following list of verse ids represents the references Matthew 18:12-14 and Luke 15:3-7.</p>
 <div class="code-cell docutils container">
@@ -303,9 +305,9 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="formatting-scripture-references">
-<h2>Formatting Scripture References<a class="headerlink" href="#formatting-scripture-references" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="formatting-scripture-references">
+<h2>Formatting Scripture References<a class="headerlink" href="#formatting-scripture-references" title="Link to this heading">#</a></h2>
 <p>The <strong>pythonbible</strong> library includes functionality to format normalized scripture references into a human-readable string for display/print through the <a class="reference internal" href="technical_reference.html#format-scripture-references"><span class="std std-ref">format_scripture_references</span></a> function.</p>
 <p>This functionality sorts the list of references so that they appear in the same order they would in the Bible and also combines verses into ranges when possible.</p>
 <p>For example:</p>
@@ -327,9 +329,9 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="formatting-scripture-text-beta">
-<h2>Formatting Scripture Text - BETA<a class="headerlink" href="#formatting-scripture-text-beta" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="formatting-scripture-text-beta">
+<h2>Formatting Scripture Text - BETA<a class="headerlink" href="#formatting-scripture-text-beta" title="Link to this heading">#</a></h2>
 <p>This is still a work in progress, but there is some exising functionality related to this.</p>
 <p>There is a separate Python library <strong>pythonbible-parser</strong> that parses OSIS formatted XML files (and potentially other formats in the future) and generates python objects that contain the text of the Scripture. In the future it should also contain additional formatting and notes. That output for certain versions (namely American Standard Version) have been added to the <strong>pythonbible</strong> library in order to format scripture text for display and print.</p>
 <p>To format a single version, use the <a class="reference internal" href="technical_reference.html#get-verse-text"><span class="std std-ref">get_verse_text</span></a> function.</p>
@@ -348,8 +350,8 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
         </article>
       </div>
@@ -363,10 +365,10 @@
                 </div>
                 <div class="title">Book Abbreviations</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="installation.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -380,7 +382,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2020 Nathan Patton
+                Copyright &#169; 2020-2023 Nathan Patton
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -407,7 +409,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -434,12 +436,11 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+</div><script src="_static/documentation_options.js?v=61ccb1f1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
     </body>
 </html>

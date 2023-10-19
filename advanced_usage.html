@@ -1,16 +1,17 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Technical Reference" href="technical_reference.html" /><link rel="prev" title="Book Abbreviations" href="book_abbreviations.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Technical Reference" href="technical_reference.html" /><link rel="prev" title="Book Abbreviations" href="book_abbreviations.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><meta name="generator" content="sphinx-4.5.0, furo 2022.06.21"/>
-        <title>Advanced Usage - pythonbible 0.11.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
+        <title>Advanced Usage - pythonbible 0.12.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-toolbox-code.css?v=4ee5d529" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -124,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">pythonbible 0.11.0 documentation</div></a>
+      <a href="index.html"><div class="brand">pythonbible 0.12.0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -153,7 +154,7 @@
   
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -184,7 +185,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -198,21 +200,21 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="advanced-usage">
-<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">#</a></h1>
-<div class="section" id="single-chapter-books">
-<h2>Single Chapter Books<a class="headerlink" href="#single-chapter-books" title="Permalink to this headline">#</a></h2>
+          <section id="advanced-usage">
+<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h1>
+<section id="single-chapter-books">
+<h2>Single Chapter Books<a class="headerlink" href="#single-chapter-books" title="Link to this heading">#</a></h2>
 <p>Several books of the Bible only contain one chapter, and there is some special functionality in pythonbible related to this.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To try any of the single chapter book features in an interactive jupyter notebook, download this
 <a class="reference download internal" download="" href="_downloads/f7b48c7475a4eefb77662f571eb4d565/pythonbible-single-chapter-books.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
 </div>
-<div class="section" id="finding-references">
-<h3>Finding References<a class="headerlink" href="#finding-references" title="Permalink to this headline">#</a></h3>
+<section id="finding-references">
+<h3>Finding References<a class="headerlink" href="#finding-references" title="Link to this heading">#</a></h3>
 <p>When parsing a given text to find all the references contained within, if we find a reference for a single chapter book that contains only one number, rather than both chapter and verse numbers, we assume that number to be the verse number.</p>
-<div class="section" id="example-obadiah-1-vs-genesis-1">
-<h4>Example: Obadiah 1 vs Genesis 1<a class="headerlink" href="#example-obadiah-1-vs-genesis-1" title="Permalink to this headline">#</a></h4>
+<section id="example-obadiah-1-vs-genesis-1">
+<h4>Example: Obadiah 1 vs Genesis 1<a class="headerlink" href="#example-obadiah-1-vs-genesis-1" title="Link to this heading">#</a></h4>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
@@ -257,9 +259,9 @@
 </div>
 </div>
 <p>Rather than being interpreted as Genesis 1:1, this would be interpreted as Genesis 1:1-31.</p>
-</div>
-<div class="section" id="example-philemon-3-6-vs-genesis-3-6">
-<h4>Example: Philemon 3-6 vs Genesis 3-6<a class="headerlink" href="#example-philemon-3-6-vs-genesis-3-6" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="example-philemon-3-6-vs-genesis-3-6">
+<h4>Example: Philemon 3-6 vs Genesis 3-6<a class="headerlink" href="#example-philemon-3-6-vs-genesis-3-6" title="Link to this heading">#</a></h4>
 <div class="code-cell docutils container">
 <div class="prompt code-cell-prompt notranslate">In [1]:</div>
 <div class="code-cell-code highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pythonbible</span> <span class="k">as</span> <span class="nn">bible</span>
@@ -306,18 +308,18 @@
 </div>
 </div>
 <p>Rather than being interpreted as Genesis 1:3-6, this would be interpreted as Genesis 3:1-6:22.</p>
-</div>
-</div>
-<div class="section" id="converting-references-to-verse-ids">
-<h3>Converting References to Verse IDs<a class="headerlink" href="#converting-references-to-verse-ids" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="converting-references-to-verse-ids">
+<h3>Converting References to Verse IDs<a class="headerlink" href="#converting-references-to-verse-ids" title="Link to this heading">#</a></h3>
 <p>Because normalized references in pythonbible always explicitly include chapter and verse numbers, there is no difference in how references are converted to verse ids for single chapter books.</p>
-</div>
-<div class="section" id="converting-verse-ids-to-references">
-<h3>Converting Verse IDs to References<a class="headerlink" href="#converting-verse-ids-to-references" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="converting-verse-ids-to-references">
+<h3>Converting Verse IDs to References<a class="headerlink" href="#converting-verse-ids-to-references" title="Link to this heading">#</a></h3>
 <p>Because verse ids in pythonbible always explicitly include chapter and verse numbers, there is no difference in how verse ids are converted to references for single chapter books.</p>
-</div>
-<div class="section" id="formatting-references-for-print-display">
-<h3>Formatting References for Print/Display<a class="headerlink" href="#formatting-references-for-print-display" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="formatting-references-for-print-display">
+<h3>Formatting References for Print/Display<a class="headerlink" href="#formatting-references-for-print-display" title="Link to this heading">#</a></h3>
 <p>By default, when formatting references for print/display for references of a single chapter book, the chapter number will not be included.</p>
 <p>For example:</p>
 <div class="code-cell docutils container">
@@ -349,8 +351,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="always-include-chapter-numbers">
-<h4>Always Include Chapter Numbers<a class="headerlink" href="#always-include-chapter-numbers" title="Permalink to this headline">#</a></h4>
+<section id="always-include-chapter-numbers">
+<h4>Always Include Chapter Numbers<a class="headerlink" href="#always-include-chapter-numbers" title="Link to this heading">#</a></h4>
 <p>If you want to force <strong>pythonbible</strong> to include the chapter numbers even for single chapter books, you can use the <code class="docutils literal notranslate"><span class="pre">always_include_chapter_numbers</span></code> optional parameter of the <a class="reference internal" href="technical_reference.html#format-scripture-references"><span class="std std-ref">format_scripture_references</span></a> or <a class="reference internal" href="technical_reference.html#format-single-reference"><span class="std std-ref">format_single_reference</span></a> functions, setting that optional parameter to be <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>For example:</p>
 <div class="code-cell docutils container">
@@ -368,11 +370,11 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="multi-book-references">
-<h2>Multi Book References<a class="headerlink" href="#multi-book-references" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+</section>
+<section id="multi-book-references">
+<h2>Multi Book References<a class="headerlink" href="#multi-book-references" title="Link to this heading">#</a></h2>
 <p>It is possible for a single reference to be a range that spans more than one book of the Bible.</p>
 <p>For example, the following references are all equally referencing the entire first five books of the Bible:</p>
 <ul class="simple">
@@ -385,8 +387,8 @@
 <p>To try any of the multi book reference features in an interactive jupyter notebook, download this
 <a class="reference download internal" download="" href="_downloads/400aa35812b74236a1fdec03f7aaed65/pythonbible-multi-book-references.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
 </div>
-<div class="section" id="id1">
-<h3>Finding References<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="id1">
+<h3>Finding References<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>When parsing a given text to find all the references contained within, if we find a ranged reference like those above that span multiple books of the Bible, we should parse that into a single normalized reference that includes the optional end_book attribute.</p>
 <p>For example, “Genesis - Deuteronomy” vs “Genesis;Exodus;Numbers;Leviticus;Deuteronomy”:</p>
 <div class="code-cell docutils container">
@@ -442,17 +444,17 @@
 </div>
 </div>
 <p>That optimization is optional as it can degrade performance for processing large ranges if that particular optimization is not necessary. This optimization will be run automatically when the list of references is formatted into a Scripture reference string.</p>
-</div>
-<div class="section" id="id2">
-<h3>Converting References to Verse IDs<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id2">
+<h3>Converting References to Verse IDs<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Whether a multi book range reference is in a single normalized reference or a list of one normalized reference for each book does not affect the results of converting that reference into a list of verse ids.</p>
-</div>
-<div class="section" id="id3">
-<h3>Converting Verse Ids to References<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id3">
+<h3>Converting Verse Ids to References<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>When converting a list of verse ids into a list of references, multi book range references will always be optimized into a single normalized reference when possible.</p>
-</div>
-<div class="section" id="id4">
-<h3>Formatting References for Print/Display<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="id4">
+<h3>Formatting References for Print/Display<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>As mentioned earlier, when formatting references for print/display, pythonbible always optimizes the list of references into as few references as possible by using multi book range references.</p>
 <p>By default, chapter numbers will not be included when the entire book is included in the reference.</p>
 <div class="code-cell docutils container">
@@ -470,8 +472,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h4>Always Include Chapter Numbers<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
+<section id="id5">
+<h4>Always Include Chapter Numbers<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <p>If you want to force <strong>pythonbible</strong> to include the chapter numbers even when the entire book is covered by the reference, you can use the <code class="docutils literal notranslate"><span class="pre">always_include_chapter_numbers</span></code> optional parameter of the <a class="reference internal" href="technical_reference.html#format-scripture-references"><span class="std std-ref">format_scripture_references</span></a> or <a class="reference internal" href="technical_reference.html#format-single-reference"><span class="std std-ref">format_single_reference</span></a> functions, setting that optional parameter to be <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <p>For example:</p>
 <div class="code-cell docutils container">
@@ -489,11 +491,11 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="book-groups">
-<h2>Book Groups<a class="headerlink" href="#book-groups" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+</section>
+<section id="book-groups">
+<h2>Book Groups<a class="headerlink" href="#book-groups" title="Link to this heading">#</a></h2>
 <p>The books of the Bible can be categorized into different groups.</p>
 <p>The first and biggest categorization is dividing the books into the Old Testament (Genesis - Malachi) and the New Testament (Matthew - Revelation).</p>
 <p>Within the Old Testament, the books can be further divided as follows:</p>
@@ -525,8 +527,8 @@
 <p>To try any of the book group features in an interactive jupyter notebook, download this
 <a class="reference download internal" download="" href="_downloads/f75cd6b78da66c94c9240c9159ff8365/pythonbible-book-groups.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">file</span></code></a>.</p>
 </div>
-<div class="section" id="finding-references-by-book-groups">
-<h3>Finding References by Book Groups<a class="headerlink" href="#finding-references-by-book-groups" title="Permalink to this headline">#</a></h3>
+<section id="finding-references-by-book-groups">
+<h3>Finding References by Book Groups<a class="headerlink" href="#finding-references-by-book-groups" title="Link to this heading">#</a></h3>
 <p>By default, when <strong>pythonbible</strong> parses text to find all references contained within, it does not take book groups into consideration.</p>
 <p>For example:</p>
 <div class="code-cell docutils container">
@@ -543,8 +545,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="finding-references-by-default-book-groups">
-<h4>Finding References by Default Book Groups<a class="headerlink" href="#finding-references-by-default-book-groups" title="Permalink to this headline">#</a></h4>
+<section id="finding-references-by-default-book-groups">
+<h4>Finding References by Default Book Groups<a class="headerlink" href="#finding-references-by-default-book-groups" title="Link to this heading">#</a></h4>
 <p>When parsing text to find all references contained within, you can pass in an optional <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> parameter telling <strong>pythonbible</strong> what book groups to take into consideration.</p>
 <p>The <strong>pythonbible</strong> library includes a <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> value for you to use that includes all the book groups described above. To use that, pass <a class="reference internal" href="technical_reference.html#book-groups"><span class="std std-ref">BOOK_GROUPS</span></a> as the value for the optional <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> argument.</p>
 <p>For example:</p>
@@ -601,9 +603,9 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="finding-references-by-custom-book-groups">
-<h4>Finding References by Custom Book Groups<a class="headerlink" href="#finding-references-by-custom-book-groups" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="finding-references-by-custom-book-groups">
+<h4>Finding References by Custom Book Groups<a class="headerlink" href="#finding-references-by-custom-book-groups" title="Link to this heading">#</a></h4>
 <p>If you don’t want to use the book groups as defined above but rather a subset of them or additional categorizations or completely custom categorizations, you can do that by passing in a custom value for the <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> optional argument of the <code class="docutils literal notranslate"><span class="pre">get_references</span></code> function.</p>
 <p>The expected type of the <code class="docutils literal notranslate"><span class="pre">book_groups</span></code> argument is a <code class="docutils literal notranslate"><span class="pre">dict[str,</span> <span class="pre">list[Book]]</span></code> where the string key is a regular expression to be used to match to that particular book group, and the list of <a class="reference internal" href="technical_reference.html#book"><span class="std std-ref">Book</span></a> objects are the books of the Bible associated with that book group.</p>
 <p>There is a <a class="reference internal" href="technical_reference.html#bookgroup"><span class="std std-ref">BookGroup</span></a> <code class="docutils literal notranslate"><span class="pre">Enum</span></code> included to help with this.</p>
@@ -672,10 +674,10 @@
 </pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
         </article>
       </div>
@@ -689,10 +691,10 @@
                 </div>
                 <div class="title">Technical Reference</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="book_abbreviations.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -706,7 +708,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2020 Nathan Patton
+                Copyright &#169; 2020-2023 Nathan Patton
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -733,7 +735,7 @@
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -783,12 +785,11 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/scripts/furo.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+</div><script src="_static/documentation_options.js?v=61ccb1f1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
     </body>
 </html>
